@@ -1,0 +1,13 @@
+server:
+  port: 7072
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:7070/eureka/
+spring:
+  application:   
+     name: springCloud-gateway    
+zuul:
+  routes:
+    service : springCloud-client
+    springCloud-client: /api-a/**
